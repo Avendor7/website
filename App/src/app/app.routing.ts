@@ -8,7 +8,7 @@ import { NotFoundComponent } from './404/404.component';
 const appRoutes: Routes = [
   { path: '', component: ResumeComponent },
   { path: 'ipaddress', component: IpAddressComponent },
-  // { path: 'resume', component: ResumeComponent },
+  { path: 'resume', component: ResumeComponent },
   { path: '**', component: NotFoundComponent }
 ];
 

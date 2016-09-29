@@ -7,6 +7,8 @@ import {ResumeComponent} from './resume/resume.component';
 import {IpAddressComponent} from './ipaddress/ipaddress.component';
 import {NotFoundComponent} from './404/404.component';
 import {NavbarComponent} from './navbar/navbar.component';
+import {FooterComponent} from './footer/footer.component';
+
 
 @NgModule({
  declarations: [
@@ -14,6 +16,7 @@ import {NavbarComponent} from './navbar/navbar.component';
  ResumeComponent,
  IpAddressComponent,
  NotFoundComponent,
+ FooterComponent,
  NavbarComponent
  ],
  imports: [
@@ -21,7 +24,7 @@ import {NavbarComponent} from './navbar/navbar.component';
  routing
  ],
  providers: [appRoutingProviders],
- bootstrap: [NavbarComponent, ResumeComponent]
+ bootstrap: [NavbarComponent, ResumeComponent, FooterComponent]
 })
 export class AppModule {
 }
