@@ -11,8 +11,7 @@
     "rootDir": "src"
   },
   "exclude": [
-    "typings/browser.d.ts",
-    "typings/browser",
+    "build",
     "node_modules"
   ]
 }

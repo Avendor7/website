@@ -19,9 +19,8 @@ gulp.task('inject:dist', ['sass:dist'], function () {
 });
 
 function injectFiles(options, dest) {
-    return gulp.src(config.SRC + '/index.pug')
+    return gulp.src(config.SRC + '/index.html')
         .pipe(inject(gulp.src([config.SRC + '/**/*.js', '!' + config.SRC + '/**/systemjs.config.js'], {read: false})))
         .pipe(inject(gulp.src(dest + '/**/*.css', {read: false}), { ignorePath: dest }))
-        .pipe(pug(options))
         .pipe(gulp.dest(dest));
 }

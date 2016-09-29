@@ -1,8 +1,7 @@
 import {Component} from '@angular/core';
 @Component({
-    moduleId: module.id,
     selector: 'my-app',
-    templateUrl: 'ipaddress.html'
+    templateUrl: '/app/ipaddress/ipaddress.html'
 })
 export class IpAddressComponent {
 }
