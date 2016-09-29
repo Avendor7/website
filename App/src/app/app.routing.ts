@@ -1,12 +1,15 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ResumeComponent } from './resume/resume.component';
+import { IpAddressComponent } from './ipaddress/ipaddress.component';
+import { NotFoundComponent } from './404/404.component';
+
 
 const appRoutes: Routes = [
- // { path: '/ipaddress', component: IpAddressComponent },
-
-  { path: 'resume', component: ResumeComponent }
-//  { path: '**', component: PageNotFoundComponent }
+  { path: '', component: ResumeComponent },
+  { path: 'ipaddress', component: IpAddressComponent },
+  // { path: 'resume', component: ResumeComponent },
+  { path: '**', component: NotFoundComponent }
 ];
 
 export const appRoutingProviders: any[] = [
