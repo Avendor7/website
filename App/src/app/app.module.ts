@@ -6,8 +6,8 @@ import {AppComponent} from './app.component';
 import {ResumeComponent} from './resume/resume.component';
 import {IpAddressComponent} from './ipaddress/ipaddress.component';
 import {NotFoundComponent} from './404/404.component';
-import {NavbarComponent} from "./navbar/navbar.component";
-import {FooterComponent} from "./footer/footer.component";
+import {NavbarComponent} from './navbar/navbar.component';
+import {FooterComponent} from './footer/footer.component';
 
 
 @NgModule({

@@ -9,12 +9,10 @@ gulp.task('inject', ['inject:dev']);
 gulp.task('inject:dev', ['sass:dev'], function () {
     var dest = config.dev.DEST;
     return injectFiles(config.pug.dev, dest);
-    return injectFiles(config.pug.dev, dest);
 });
 
 gulp.task('inject:dist', ['sass:dist'], function () {
     var dest = config.dist.DEST;
-    return injectFiles(config.pug.dist, dest);
     return injectFiles(config.pug.dist, dest);
 });
 
