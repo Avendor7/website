@@ -52,6 +52,6 @@
     "tslint": "^3.6.0",
     "tslint-stylish": "^2.1.0-beta",
     "typescript": "^2.0.3",
-    "typings": "^0.7.9"
+    "typings": "^1.4.0"
   }
 }
