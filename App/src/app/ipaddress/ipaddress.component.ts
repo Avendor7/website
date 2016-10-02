@@ -4,4 +4,8 @@ import {Component} from '@angular/core';
     templateUrl: '/app/ipaddress/ipaddress.html'
 })
 export class IpAddressComponent {
+
+    
+
+
 }
