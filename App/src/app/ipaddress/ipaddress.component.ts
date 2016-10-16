@@ -1,20 +1,14 @@
-import {Component} from '@angular/core';
-import {IpAddressService} from './ipaddress.service'
+import { Component } from '@angular/core';
+import { IpAddressService } from './ipaddress.service'
 
 @Component({
     selector: 'my-app',
     templateUrl: '/app/ipaddress/ipaddress.html',
-    providers : [IpAddressService]
+    providers: [IpAddressService]
 })
 export class IpAddressComponent {
 
-    constructor(private ipAddressService:IpAddressService){
-        
-        
-        var ipaddressData = this.ipAddressService.getAddresses().subscribe();
-        console.log(data);
- }
-  
-  
+    constructor(private ipAddressService: IpAddressService) {
 
+    }
 }

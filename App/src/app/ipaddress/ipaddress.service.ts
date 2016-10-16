@@ -17,19 +17,11 @@ export class IpAddressService {
 
 
     public getAddresses(): Observable<IpAddressComponent[]> {
-        // return this.http.get(this.serverUrl)
-        //     .toPromise()
-        //     .then(response => response.json().data as IpAddressComponent[]);
         return this.http.get(this.serverUrl)
             .map((res:Response) => res.json())
             .catch(this.handleError);
     }
 
-    private extractData(res: Response) {
-        let body = res.json();
-        return  ;
-    }
-    
     private handleError (error: any) {
     // In a real world app, we might use a remote logging infrastructure
     // We'd also dig deeper into the error to get a better message
