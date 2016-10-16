@@ -1,7 +1,7 @@
 import { Injectable }    from '@angular/core';
-import { Headers, Http } from '@angular/http';
+import { Http, Response } from '@angular/http';
 
-import {Observable} from {'rxjs/Observable'};
+import {Observable} from 'rxjs/Observable';
 
 import 'rxjs/add/operator/toPromise';
 
@@ -11,24 +11,23 @@ import { IpAddressComponent } from './ipaddress.component';
 @Injectable()
 export class IpAddressService {
    
-    private serverUrl = 'http://binbash.xyz/ipaddress'
+    private serverUrl = 'http://binbash.xyz:1337/ipaddress';
    
     constructor(private http: Http) { }
 
 
-    getAddresses(): Observable<IpAddressComponent[]>{
-
+    public getAddresses(): Observable<IpAddressComponent[]> {
         // return this.http.get(this.serverUrl)
         //     .toPromise()
         //     .then(response => response.json().data as IpAddressComponent[]);
         return this.http.get(this.serverUrl)
-            .map(this.extractData)
+            .map((res:Response) => res.json())
             .catch(this.handleError);
     }
 
     private extractData(res: Response) {
         let body = res.json();
-        return body.data || {};
+        return  ;
     }
     
     private handleError (error: any) {
