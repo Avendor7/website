@@ -10,10 +10,8 @@ import { IpAddressComponent } from './ipaddress.component';
 
 @Injectable()
 export class IpAddressService {
-   
-    private serverUrl = 'http://binbash.xyz:1337/ipaddress';
-   
-    constructor(private http: Http) { }
+       private serverUrl = 'http://binbash.xyz:1337/ipaddress';
+   constructor(private http: Http) { }
 
 
     public getAddresses(): Observable<IpAddressComponent[]> {

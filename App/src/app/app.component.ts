@@ -6,8 +6,4 @@ import './rxjs-operators';
     templateUrl: '/app/app.html'
 })
 export class AppComponent {
-
-    constructor(){
-        
-    }
 }

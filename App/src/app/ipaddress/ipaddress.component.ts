@@ -7,15 +7,18 @@ import { IpAddressService } from './ipaddress.service';
     providers: [IpAddressService]
 })
 export class IpAddressComponent implements OnInit {
-    
-    ipAddresses: any;
+
+    public ipAddresses: any;
 
     constructor(private ipAddressService: IpAddressService) {
 
     }
-    public ngOnInit(){
+    public ngOnInit() {
 
+        // this.ipAddressService.getAddresses().subscribe(data => this.ipAddresses);
         this.ipAddressService.getAddresses().subscribe(data => this.ipAddresses);
+
+        console.log(this.ipAddresses);
+
     }
-    
 }
