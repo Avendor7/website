@@ -13,12 +13,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor = "let x of ipaddresses">
-          <td>{{ x.hostname }}</td>
-          <td>{{ x.ipv4 }}</td>
-          <td>{{ x.VM }}</td>
-          <td>{{ x.operatingSystem }}</td>
-          <td>{{ x.description }}</td>
+        <tr *ngFor = "let address of ipAddresses$| async">
+          <td>{{ address.hostname }}</td>
+          <td>{{ address.ipv4 }}</td>
+          <td>{{ address.VM }}</td>
+          <td>{{ address.operatingSystem }}</td>
+          <td>{{ address.description }}</td>
           <td>
             <button type="button" class="btn btn-primary" ng-click="openEdit(x.id)">Edit</button>
             <button type="button" class="btn btn-danger" ng-click="deleteAddress(x.id)">Delete</button>

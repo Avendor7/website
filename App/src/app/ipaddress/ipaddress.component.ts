@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Ipaddress } from './ipaddress';
 import { IpAddressService } from './ipaddress.service';
 
 @Component({
@@ -7,16 +8,20 @@ import { IpAddressService } from './ipaddress.service';
     providers: [IpAddressService]
 })
 export class IpAddressComponent implements OnInit {
-
-    public ipAddresses: any;
+    errorMessage: string;
+    ipAddresses: Ipaddress[];
+    mode = 'Observable';
 
     constructor(private ipAddressService: IpAddressService) {
 
     }
     public ngOnInit() {
 
-        // this.ipAddressService.getAddresses().subscribe(data => this.ipAddresses);
-        this.ipAddressService.getAddresses().subscribe(data => this.ipAddresses);
+        // this.ipAddressService.getAddresses().subscribe(data => console.log(data));
+        this.ipAddressService.getAddresses()
+            .subscribe(
+                ipAddresses => this.ipAddresses = ipAddresses,
+                error =>  this.errorMessage = <any>error);
 
         console.log(this.ipAddresses);
 
