@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Ipaddress } from './ipaddress';
+//import { Ipaddress } from './ipaddress';
 import { IpAddressService } from './ipaddress.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { IpAddressService } from './ipaddress.service';
 })
 export class IpAddressComponent implements OnInit {
     errorMessage: string;
-    ipAddresses: Ipaddress[];
+    ipAddresses: any;
     mode = 'Observable';
 
     constructor(private ipAddressService: IpAddressService) {
