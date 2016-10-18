@@ -13,7 +13,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor = "let address of ipAddresses$| async">
+        <tr *ngFor = "let address of ipAddresses">
           <td>{{ address.hostname }}</td>
           <td>{{ address.ipv4 }}</td>
           <td>{{ address.VM }}</td>

@@ -20,7 +20,7 @@ export class IpAddressService {
   //         .catch(this.handleError);
   // }
   
-  public getAddresses(): Observable<Ipaddress[]> {
+  public getAddresses(): Observable<IpAddressComponent[]> {
     return this.http.get(this.serverUrl)
       .map(this.extractData)
       .catch(this.handleError);

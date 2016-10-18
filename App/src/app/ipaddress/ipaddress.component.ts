@@ -8,12 +8,13 @@ import { IpAddressService } from './ipaddress.service';
     providers: [IpAddressService]
 })
 export class IpAddressComponent implements OnInit {
-    errorMessage: string;
-    ipAddresses: any;
-    mode = 'Observable';
+    public errorMessage: string;
+    public ipAddresses:  any;
+    
+    //mode = 'Observable';
 
     constructor(private ipAddressService: IpAddressService) {
-
+        this.ipAddresses =  [];
     }
     public ngOnInit() {
 
@@ -23,7 +24,7 @@ export class IpAddressComponent implements OnInit {
                 ipAddresses => this.ipAddresses = ipAddresses,
                 error =>  this.errorMessage = <any>error);
 
-        console.log(this.ipAddresses);
+        
 
     }
 }
