@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 //import { Ipaddress } from './ipaddress';
 import { IpAddressService } from './ipaddress.service';
+import {ModalModule} from "ng2-modal";
 
 @Component({
     selector: 'my-app',
