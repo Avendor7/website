@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { ModalModule } from 'ng2-modal';
+import { FormsModule } from '@angular/forms';
 
 import { routing, appRoutingProviders } from './app.routing';
 import { AppComponent } from './app.component';
@@ -25,7 +26,8 @@ import { FooterComponent } from './footer/footer.component';
         BrowserModule,
         HttpModule,
         routing,
-        ModalModule
+        ModalModule,
+        FormsModule
     ],
     providers: [appRoutingProviders],
     bootstrap: [AppComponent]

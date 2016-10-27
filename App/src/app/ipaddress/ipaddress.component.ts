@@ -19,8 +19,9 @@ export class IpAddressComponent implements OnInit {
             .subscribe(
             ipAddresses => this.ipAddresses = ipAddresses,
             error => this.errorMessage = <any>error);
-
-
-
     }
+    public onSubmit(form) {
+        console.log('you submitted value:', form);
+    }
+
 }
