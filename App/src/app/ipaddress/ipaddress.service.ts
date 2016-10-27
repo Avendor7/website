@@ -4,7 +4,6 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 
 import 'rxjs/add/operator/toPromise';
-import { Ipaddress } from './ipaddress';
 import { IpAddressComponent } from './ipaddress.component';
 
 
@@ -19,7 +18,7 @@ export class IpAddressService {
   //         .map((res:Response) => res.json())
   //         .catch(this.handleError);
   // }
-  
+
   public getAddresses(): Observable<IpAddressComponent[]> {
     return this.http.get(this.serverUrl)
       .map(this.extractData)
