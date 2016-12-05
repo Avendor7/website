@@ -37,7 +37,7 @@
 		<h2>New IP Address</h2>
 	</modal-header>
 	<modal-content>
-		<form #newAddressForm="ngForm" (ngSubmit)="onSubmit(newAddressForm.value)" class="form-horizontal">
+		<form id="newAddressForm" #newAddressForm="ngForm" (ngSubmit)="onSubmit(newAddressForm.value)" class="form-horizontal">
 			<fieldset>
 				<div class="form-group">
 					<label class="col-lg-3 control-label">Hostname</label>
@@ -71,10 +71,11 @@
 					</div>
 				</div>
 			</fieldset>
+			<button for="newAddressForm" type="submit" class="btn btn-primary" (click)="newAddress.close()">Save</button>
 		</form>
 	</modal-content>
 	<modal-footer>
-		<button type="submit" class="btn btn-primary" (click)="newAddress.close()">Save</button>
+		<!--<button for="newAddressForm" type="submit" class="btn btn-primary" (click)="newAddress.close()">Save</button>-->
 		<button class="btn btn-danger" (click)="newAddress.close()">Cancel</button>
 	</modal-footer>
 </modal>
